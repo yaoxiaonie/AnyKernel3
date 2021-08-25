@@ -1,8 +1,0 @@
-on boot
-write /sys/module/lowmemorykiller/parameters/debug_level 0
-write /sys/block/mmcblk0/queue/iostats 0
-write /sys/block/sda/queue/iostats 0
-write /sys/module/debug/parameters/enable_event_log 0
-write /sys/module/glink/parameters/debug_mask 0
-write /sys/module/qpnp_smb2/parameters/debug_mask 0
-write /sys/module/qpnp_fg_gen3/parameters/debug_mask 0

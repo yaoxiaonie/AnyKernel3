@@ -29,14 +29,6 @@ ramdisk_compression=auto;
 ## AnyKernel boot install
 dump_boot;
 
-## Add init.rain.rc
-mount -o rw,remount -t auto /vendor > /dev/null;
-mount -o rw,remount -t auto /system > /dev/null;
-insert_line /vendor/etc/init/hw/init.qcom.rc "import /vendor/etc/init/hw/init.rain.rc" before "import /vendor/etc/init/hw/init.qcom.power.rc" "import /vendor/etc/init/hw/init.rain.rc";
-cp -a /tmp/anykernel/patch/* /vendor/etc/init/hw/
-set_perm_recursive 0 0 755 644 /vendor/etc/init/hw/*;
-
-
 write_boot;
 ## end boot install
 
